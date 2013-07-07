@@ -1,5 +1,7 @@
 var fs = require('fs');
-var index = fs.readFileSync("./index.html");
+var index = fs.readFileSync("./index.html", "utf8");
+// buffer implementation is unclear,
+// read http://docs.nodejitsu.com/articles/advanced/buffers/how-to-use-buffers
 
 var express = require('express');
 var app = express.createServer(express.logger());
